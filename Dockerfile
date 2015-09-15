@@ -30,18 +30,18 @@
 #    want to remove, and other cleanups and fixes you want to do:
 #       FROM scratch
 #       ADD rootfs.tar.gz /
-#       COPY sles11sp3_minimize.sh /root/
-#       RUN chmod 0755 /root/sles11sp3_minimize.sh
+#       COPY sles11sp4_minimize.sh /root/
+#       RUN chmod 0755 /root/sles11sp4_minimize.sh
 #
 # 8. Run
 #       docker build .
 #       docker run -ti <image> /bin/bash
-#       $ /root/sles11sp3_minimize.sh
+#       $ /root/sles11sp4_minimize.sh
 #
 #    # Note: I personally like to leave my trail visible for people to see so
 #    # they know what changes, have been made to the original image, and not do
 #    # f.ex.
-#    #  $ rm /root/sles11sp3_minimize.sh
+#    #  $ rm /root/sles11sp4_minimize.sh
 #    #  $ history -c
 #    # But, that's entirely up to you as an image maintainer of course.
 #
@@ -49,12 +49,12 @@
 #
 # 9. Export the container as a new base layer, and compress it as much as
 #    possible for distribution:
-#       docker export <container> > sles-11-sp3-x86_64.tar
-#       xz -9 -e sles-11-sp3-x86_64.tar
+#       docker export <container> > sles-11-sp4-x86_64.tar
+#       xz -9 -e sles-11-sp4-x86_64.tar
 #
 # 10. Change Dockerfile to simply use the new image as it's base
 #
 # ==============================================================================
 
 FROM scratch
-ADD sles-11-sp3-x86_64.tar.xz /
+ADD sles-11-sp4-x86_64.tar.xz /
