@@ -1,4 +1,4 @@
-Convenience images for various versions of SUSE which are not available from the official repo
+Convenience images for various versions of SUSE which are not available from the official repo.
 
 The images are base on JeOS builds from SUSE Studio (http://susestudio.com), then minimized further by removing some packages not needed in a typical Docker setup.
 
