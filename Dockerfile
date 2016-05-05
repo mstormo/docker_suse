@@ -52,7 +52,7 @@
 #       docker export <container> > sles-11-sp4-x86_64.tar
 #       xz -9 -e sles-11-sp4-x86_64.tar
 #
-# 10. Change Dockerfile to simply use the new image as it's base
+# 10. Change Dockerfile to simply use the new image as its base
 #
 # ==============================================================================
 
